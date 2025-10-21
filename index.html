@@ -1,25 +1,456 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paul Villalobos | Inteligencia Artificial Aplicada a Ventas B2B</title>
-    <meta name="description" content="Paul Villalobos — líder en ventas B2B y tecnología aplicada a resultados. Descubre cómo la inteligencia artificial está transformando la gestión comercial." />
-    <meta name="keywords" content="Inteligencia artificial aplicada a ventas, IA en ventas, automatización comercial, CRM con IA, liderazgo B2B, ventas B2B, estrategia comercial, Paul Villalobos" />
+    <meta
+      name="description"
+      content="Paul Villalobos — líder en ventas B2B y tecnología aplicada a resultados. Descubre cómo la inteligencia artificial está transformando la gestión comercial."
+    />
+    <meta
+      name="keywords"
+      content="Inteligencia artificial aplicada a ventas, IA en ventas, automatización comercial, CRM con IA, liderazgo B2B, ventas B2B, estrategia comercial, Paul Villalobos"
+    />
     <meta name="author" content="Paul Villalobos" />
 
     <meta property="og:title" content="Paul Villalobos | Transformando Ventas con IA" />
-    <meta property="og:description" content="Líder en ventas B2B y tecnología aplicada. Más de una década transformando la gestión comercial con inteligencia artificial." />
+    <meta
+      property="og:description"
+      content="Líder en ventas B2B y tecnología aplicada. Más de una década transformando la gestión comercial con inteligencia artificial."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="icon-trend" viewBox="0 0 24 24">
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+        <polyline points="16 7 22 7 22 13" />
+      </symbol>
+      <symbol id="icon-spark" viewBox="0 0 24 24">
+        <path
+          d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+        />
+        <path d="M20 3v4" />
+        <path d="M22 5h-4" />
+        <path d="M4 17v2" />
+        <path d="M5 18H3" />
+      </symbol>
+      <symbol id="icon-collective" viewBox="0 0 24 24">
+        <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+        <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+        <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+        <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+        <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+        <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+        <path d="M6 18a4 4 0 0 1-1.967-.516" />
+        <path d="M19.967 17.484A4 4 0 0 1 18 18" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </symbol>
+      <symbol id="icon-bolt" viewBox="0 0 24 24">
+        <path
+          d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+        />
+      </symbol>
+    </svg>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h1>Transformo la gestión comercial con inteligencia artificial y estrategia</h1>
+        <p>
+          Soy Paul Villalobos, líder en ventas B2B y tecnología aplicada a resultados.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-accent btn-hero" href="#about">
+            Conoce mi historia
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-arrow-right" />
+              </svg>
+            </span>
+          </a>
+          <a class="btn btn-outline" href="#expertise">
+            Descubre cómo aplico IA a las ventas
+          </a>
+        </div>
+        <a class="hero-chevron" href="#about" aria-label="Ir a la sección Sobre mí">
+          <svg viewBox="0 0 24 24">
+            <use href="#icon-chevron-down" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container grid about-grid">
+        <div>
+          <h2>Más de una década liderando el crecimiento comercial en empresas de alto impacto</h2>
+          <p>
+            He dedicado mi carrera a transformar la forma en que las empresas abordan las ventas B2B,
+            integrando tecnología e inteligencia artificial para impulsar resultados medibles y sostenibles.
+          </p>
+          <p>
+            Creo firmemente que la tecnología no reemplaza el talento humano, sino que lo amplifica.
+            Mi misión es ayudar a las organizaciones a alcanzar su máximo potencial comercial mediante
+            estrategias inteligentes y herramientas de vanguardia.
+          </p>
+
+          <div class="grid timeline">
+            <article class="timeline-card">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-trend" />
+                </svg>
+              </div>
+              <h3>+15% crecimiento anual en ventas B2B</h3>
+              <p>
+                Lideré la transformación comercial en Laive S.A., implementando estrategias de optimización
+                y tecnología aplicada.
+              </p>
+            </article>
+
+            <article class="timeline-card">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-spark" />
+                </svg>
+              </div>
+              <h3>+10M soles anuales en ventas Ecommerce</h3>
+              <p>
+                Desarrollé y escalé canales digitales, integrando CRM y herramientas de análisis predictivo
+                para maximizar conversiones.
+              </p>
+            </article>
+
+            <article class="timeline-card">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-collective" />
+                </svg>
+              </div>
+              <h3>Sistemas IA que optimizan ventas y procesos</h3>
+              <p>
+                Creé soluciones de inteligencia artificial aplicada, desde automatización de reportes hasta
+                análisis predictivo de oportunidades comerciales.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div>
+          <img
+            class="profile-photo"
+            src="assets/paul-portrait.jpg"
+            alt="Paul Villalobos - Líder en ventas B2B y tecnología"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Lo que hago</h2>
+          <p>Tres pilares fundamentales para transformar tu estrategia comercial</p>
+        </div>
+        <div class="grid cards-grid">
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-target" />
+              </svg>
+            </div>
+            <h3>Gestión Comercial Estratégica</h3>
+            <p>
+              Optimizo canales B2B, precios y rentabilidad con visión integral. Diseño estrategias que conectan
+              objetivos de negocio con ejecución comercial efectiva.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-bolt" />
+              </svg>
+            </div>
+            <h3>Optimización de Procesos</h3>
+            <p>
+              Digitalizo operaciones y flujos comerciales para maximizar eficiencia. Elimino cuellos de botella y
+              automatizo tareas repetitivas que frenan el crecimiento.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-collective" />
+              </svg>
+            </div>
+            <h3>Tecnología Aplicada a Ventas</h3>
+            <p>
+              Implemento herramientas de inteligencia artificial para decisiones más inteligentes y ventas más
+              efectivas. Del CRM al análisis predictivo, tecnología que impulsa resultados.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos" class="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Casos de Éxito</h2>
+          <p>Transformaciones reales que generan resultados medibles</p>
+        </div>
+        <div class="grid cards-grid">
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                <path d="M3 12A9 3 0 0 0 21 12" />
+              </svg>
+            </div>
+            <h3>Laive S.A.</h3>
+            <p>
+              Integración de CRM y tableros B2B que permitieron visualizar toda la operación comercial en tiempo
+              real.
+            </p>
+            <div class="casestudy-stats">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-trend" />
+              </svg>
+              <span>+15% crecimiento anual</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-spark" />
+              </svg>
+            </div>
+            <h3>Palestra Sistemas</h3>
+            <p>
+              Desarrollo de ERP y Business Intelligence personalizados para más de 50 empresas, optimizando
+              procesos y toma de decisiones.
+            </p>
+            <div class="casestudy-stats">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-target" />
+              </svg>
+              <span>50+ empresas transformadas</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-collective" />
+              </svg>
+            </div>
+            <h3>VoxCliente</h3>
+            <p>
+              Plataforma de IA que convierte grabaciones de llamadas en actas automáticas, liberando tiempo
+              valioso para cerrar más ventas.
+            </p>
+            <div class="casestudy-stats">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-bolt" />
+              </svg>
+              <span>Automatización inteligente</span>
+            </div>
+          </article>
+        </div>
+        <div class="section-heading section-heading--spaced">
+          <a class="btn btn-outline" href="#casos">Ver más proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Lo que dicen de mí</h2>
+          <p>Validación de quienes han trabajado conmigo</p>
+        </div>
+        <div class="grid testimonial-grid">
+          <article class="card testimonial-card">
+            <p>
+              "Paul tiene una visión única para conectar la estrategia comercial con la tecnología. Su capacidad
+              para traducir necesidades de negocio en soluciones prácticas es excepcional."
+            </p>
+            <div class="testimonial-meta">
+              <span class="initials" aria-hidden="true">JM</span>
+              <div>
+                <strong>José Martínez</strong>
+                <p>Gerente General, ICO Food Service</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card testimonial-card">
+            <p>
+              "Trabajar con Paul transformó nuestra gestión comercial. Los sistemas que implementó nos dieron
+              visibilidad total y control sobre nuestras operaciones B2B."
+            </p>
+            <div class="testimonial-meta">
+              <span class="initials" aria-hidden="true">AR</span>
+              <div>
+                <strong>Ana Rodríguez</strong>
+                <p>Directora Comercial, Distribuidora Norte</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Ideas que conectan estrategia, tecnología y propósito</h2>
+          <p>Reflexiones sobre el futuro de las ventas y la inteligencia artificial</p>
+        </div>
+        <div class="grid cards-grid">
+          <article class="card blog-card">
+            <div class="blog-thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-collective" />
+              </svg>
+            </div>
+            <h3>El futuro de las ventas B2B está en la IA aplicada</h3>
+            <p>
+              Cómo la inteligencia artificial está cambiando el juego en la gestión comercial...
+            </p>
+            <a class="btn btn-ghost" href="https://linkedin.com" target="_blank" rel="noopener">Leer en LinkedIn →</a>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-target" />
+              </svg>
+            </div>
+            <h3>Estrategia antes que tecnología</h3>
+            <p>
+              La tecnología amplifica, pero la estrategia define. Aprendizajes de más de 10 años...
+            </p>
+            <a class="btn btn-ghost" href="https://linkedin.com" target="_blank" rel="noopener">Leer en LinkedIn →</a>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-bolt" />
+              </svg>
+            </div>
+            <h3>Automatización inteligente en ventas</h3>
+            <p>
+              Qué automatizar, qué mantener humano, y cómo encontrar el balance perfecto...
+            </p>
+            <a class="btn btn-ghost" href="https://linkedin.com" target="_blank" rel="noopener">Leer en LinkedIn →</a>
+          </article>
+        </div>
+        <div class="section-heading section-heading--spaced">
+          <a class="btn btn-outline" href="https://linkedin.com" target="_blank" rel="noopener">
+            Explorar reflexiones
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-arrow-right" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contacto">
+      <div class="container">
+        <div class="cta-shell">
+          <h2>Estoy construyendo el futuro de las ventas con IA</h2>
+          <p>¿Hablamos de cómo transformar tu negocio?</p>
+          <a class="btn btn-accent btn-cta" href="mailto:contact@paulvillalobos.com">
+            Conversemos
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#icon-arrow-right" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="grid footer-grid">
+          <div>
+            <h3>Paul Villalobos</h3>
+            <p>
+              Líder en ventas B2B y tecnología aplicada. Transformando la gestión comercial con inteligencia artificial.
+            </p>
+          </div>
+          <div>
+            <h4>Navegación</h4>
+            <ul class="footer-nav">
+              <li><a href="#about">Sobre mí</a></li>
+              <li><a href="#expertise">Expertise</a></li>
+              <li><a href="#casos">Casos de éxito</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Conecta</h4>
+            <div class="footer-social">
+              <a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a class="social-link" href="mailto:contact@paulvillalobos.com" aria-label="Correo electrónico">
+                <svg viewBox="0 0 24 24">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Paul Villalobos. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
